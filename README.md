@@ -12,8 +12,4 @@ This project analyzes the representation of World War II technology in *Call of 
 https://lyotaa1905.github.io/world-at-war-project
 
 ## Author
-<<<<<<< HEAD
 Yasir Shirazi
-=======
-Yasir Shirazi
->>>>>>> aa04c6e (update site)
