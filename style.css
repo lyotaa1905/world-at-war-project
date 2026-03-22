@@ -1,27 +1,12 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url('https://wallpaper-house.com/data/out/21/wallpaper2you_2443.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-color: #111;
     color: #eee;
     line-height: 1.6;
-    position: relative;
-    z-index: 1;
 }
 
-/* DARK OVERLAY FOR READABILITY */
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.4); /* or 0.5 if you prefer darker */
-    z-index: 0;
-    pointer-events: none; /* 🔥 THIS FIXES YOUR ISSUE */
-}
-
-/* HERO (Homepage only) */
+/* HERO (Homepage) */
 .hero {
     position: relative;
     background-image: url('https://cdn2.steamgriddb.com/hero_thumb/c1972825977a04d826aa8f04b033314b.jpg');
@@ -34,7 +19,10 @@ body::before {
 .hero::before {
     content: "";
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: rgba(0,0,0,0.6);
 }
 
@@ -43,11 +31,29 @@ body::before {
     z-index: 1;
 }
 
-/* SUB PAGE HEADER (NO BACKGROUND IMAGE NOW) */
+/* SUB PAGE HEADER */
 .sub-hero {
+    position: relative;
+    background-image: url('https://wallpaper-house.com/data/out/21/wallpaper2you_2443.jpg');
+    background-size: cover;
+    background-position: center;
     padding: 40px 20px;
     text-align: center;
-    background: transparent;
+}
+
+.sub-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+.sub-hero * {
+    position: relative;
+    z-index: 1;
 }
 
 /* HEADER TEXT */
@@ -66,9 +72,8 @@ nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    background: rgba(34, 34, 34, 0.9);
+    background: #222;
     padding: 12px;
-    backdrop-filter: blur(4px);
 }
 
 nav a {
@@ -87,12 +92,9 @@ nav a:hover {
 main {
     max-width: 900px;
     margin: 30px auto;
-    padding: 20px;
-    background: rgba(0,0,0,0.5);
-    border-radius: 10px;
+    padding: 0 20px;
 }
 
-/* SECTIONS */
 section {
     margin-bottom: 40px;
 }
@@ -124,7 +126,8 @@ h2 {
 
 .video-container iframe {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     border: none;
@@ -136,7 +139,7 @@ h2 {
     align-items: center;
     gap: 20px;
     margin: 20px 0;
-    background: rgba(26,26,26,0.9);
+    background: #1a1a1a;
     padding: 15px;
     border-radius: 8px;
 }
